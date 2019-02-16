@@ -1,5 +1,7 @@
 //list of all icons
-const cards = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-anchor", "fa fa-bolt", "fa fa-bolt", "fa fa-cube", "fa fa-cube", "fa fa-leaf", "fa fa-leaf", "fa fa-bicycle", "fa fa-bicycle", "fa fa-bomb", "fa fa-bomb"];
+const cardOneSet = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube",
+"fa fa-leaf",  "fa fa-bicycle", "fa fa-bomb"];
+const cards = cardOneSet.concat(cardOneSet);
 
 // create a parent (box) for the cards
 var cardBox = document.querySelector(".deck");
@@ -159,7 +161,7 @@ btn.addEventListener('click', playAgain);
 
 function playAgain(){
     modal.classList.remove("show");
-
+    openedCards = [];
     cardBox.innerHTML = "";
     pair = [];
     moves = 0;
